@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-canvas: #F5F3EE;
+  --bg-secondary: #ECEAE3;
+  --text-charcoal: #171918;
+  --text-muted: #777B76;
+  --accent-forest: #283C32;
+  --accent-sage: #A9B7A0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F5F3EE;
+  color: #171918;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #F5F3EE;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  selection-background-color: #283C32;
+  selection-color: #FFFFFF;
+}
+
+::selection {
+  background: #283C32;
+  color: #F5F3EE;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ECEAE3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A9B7A0;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #283C32;
+}
+
+/* Architectural typography */
+.font-editorial {
+  font-family: "Didot", "Bodoni MT", "Cinzel", "Playfair Display", "Times New Roman", serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono-tag {
+  font-family: "SF Mono", "Fira Code", "Courier New", monospace;
+  letter-spacing: 0.02em;
+}
+
+/* Subtle glassmorphism and architectural depth */
+.glass-panel {
+  background: rgba(245, 243, 238, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(23, 25, 24, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(23, 25, 24, 0.06);
+}
+
+.glass-dark {
+  background: rgba(23, 25, 24, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #F5F3EE;
+}
+
+/* Subtle noise texture overlay */
+.bg-grain {
+  background-image: radial-gradient(rgba(23, 25, 24, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Smooth transitions */
+.transition-cinematic {
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
