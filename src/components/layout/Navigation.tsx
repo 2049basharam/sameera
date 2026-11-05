@@ -80,7 +80,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
           {/* Actions & Resume Button */}
           <div className="hidden sm:flex items-center gap-3">
             <a
-              href="/sameera-resume.pdf"
+              href="./sameera-resume.pdf"
               download="Shaik_Sameera_Bhanu_Resume.pdf"
               className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-mono text-[#171918] bg-white border border-[#171918]/10 rounded-full hover:bg-[#171918] hover:text-[#F5F3EE] transition-colors shadow-none"
             >
@@ -128,7 +128,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
 
             <div className="pt-6 border-t border-[#171918]/10 flex flex-col gap-3 mt-4">
               <a
-                href="/sameera-resume.pdf"
+                href="./sameera-resume.pdf"
                 download="Shaik_Sameera_Bhanu_Resume.pdf"
                 className="inline-flex items-center justify-center gap-2 py-2.5 text-xs font-mono text-[#171918] bg-white border border-[#171918]/10 rounded-full"
               >

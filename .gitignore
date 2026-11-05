@@ -36,3 +36,6 @@ next-env.d.ts
 *.zip
 /public/videos/
 /scripts/
+git-deploy.mjs
+check-pages.mjs
+setup-pages-api.mjs
