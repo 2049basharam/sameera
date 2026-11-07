@@ -44,9 +44,9 @@ export const profileData: ProfileData = {
   bio: "I'm Shaik Sameera Bhanu, a first-year B.Tech student interested in frontend development and building responsive, user-friendly websites. I enjoy turning ideas into interactive web experiences using HTML, CSS, and JavaScript. I'm currently learning React.js, strengthening my C++ fundamentals, and exploring Data Structures and Algorithms.",
   hero: {
     yearLabel: "Portfolio 2026",
-    headline: "I create experiences for the digital world.",
-    subheadline: "I'm Sameera Bhanu, a frontend development enthusiast exploring the intersection of technology, creativity, and interactive web experiences.",
-    identityLine: "Shaik Sameera Bhanu — Frontend Developer — Narasaraopet, India",
+    headline: "Frontend developer building responsive, accessible web applications",
+    subheadline: "First-year computer science undergraduate at Vishnu Women's University. Turning ideas into clean, interactive interfaces with HTML5, CSS3, JavaScript, and React.",
+    identityLine: "Shaik Sameera Bhanu — Frontend Developer — Narasaraopet · 16.23° N, 80.05° E",
     badge: "Available for internships",
   },
   about: {

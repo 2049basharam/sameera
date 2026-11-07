@@ -58,14 +58,14 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
           </button>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 bg-[#ECEAE3]/80 p-1 rounded-full border border-[#171918]/8 backdrop-blur-sm">
+          <nav className="hidden md:flex items-center gap-1 bg-[#ECEAE3]/80 p-1 rounded-lg border border-[#171918]/8 backdrop-blur-sm">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
               return (
                 <button
                   key={item.id}
                   onClick={() => onNavigate(item.id)}
-                  className={`px-3.5 py-1 text-xs font-mono rounded-full transition-colors ${
+                  className={`px-3 py-1 text-xs font-mono rounded-md transition-colors ${
                     isActive
                       ? "bg-[#171918] text-[#F5F3EE]"
                       : "text-[#171918]/70 hover:text-[#171918] hover:bg-[#F5F3EE]/70"
@@ -82,7 +82,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
             <a
               href="./sameera-resume.pdf"
               download="Shaik_Sameera_Bhanu_Resume.pdf"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-mono text-[#171918] bg-white border border-[#171918]/10 rounded-full hover:bg-[#171918] hover:text-[#F5F3EE] transition-colors shadow-none"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-mono text-[#171918] bg-white border border-[#171918]/10 rounded-lg hover:bg-[#171918] hover:text-[#F5F3EE] transition-colors shadow-none"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Resume</span>
@@ -90,7 +90,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
 
             <button
               onClick={() => onNavigate("contact")}
-              className="inline-flex items-center gap-1 px-4 py-1.5 text-xs font-mono text-[#F5F3EE] bg-[#283C32] hover:bg-[#1C2A23] rounded-full transition-colors"
+              className="inline-flex items-center gap-1 px-4 py-1.5 text-xs font-mono text-[#F5F3EE] bg-[#283C32] hover:bg-[#1C2A23] rounded-lg transition-colors"
             >
               <span>Contact</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -130,7 +130,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
               <a
                 href="./sameera-resume.pdf"
                 download="Shaik_Sameera_Bhanu_Resume.pdf"
-                className="inline-flex items-center justify-center gap-2 py-2.5 text-xs font-mono text-[#171918] bg-white border border-[#171918]/10 rounded-full"
+                className="inline-flex items-center justify-center gap-2 py-2.5 text-xs font-mono text-[#171918] bg-white border border-[#171918]/10 rounded-lg"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>Download Resume</span>
@@ -141,7 +141,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
                   onNavigate("contact");
                   setMobileMenuOpen(false);
                 }}
-                className="inline-flex items-center justify-center gap-2 py-2.5 text-xs font-mono text-[#F5F3EE] bg-[#283C32] rounded-full"
+                className="inline-flex items-center justify-center gap-2 py-2.5 text-xs font-mono text-[#F5F3EE] bg-[#283C32] rounded-lg"
               >
                 <span>Get in touch</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />

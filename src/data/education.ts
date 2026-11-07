@@ -15,7 +15,7 @@ export const educationData: EducationItem[] = [
     id: "btech",
     institution: "Vishnu Women's University",
     degree: "Bachelor of Technology (B.Tech)",
-    period: "First Year (Expected Graduation: 2029–30)",
+    period: "First Year · Expected 2029–30",
     status: "Currently Pursuing — Year 1",
     location: "Andhra Pradesh, India",
     description: "Building foundational engineering knowledge in computer science, software design principles, procedural programming, mathematics, and problem-solving methodologies.",
@@ -30,15 +30,15 @@ export const educationData: EducationItem[] = [
     id: "intermediate",
     institution: "VIT Junior College",
     degree: "Intermediate Education (MPC — Mathematics, Physics, Chemistry)",
-    period: "Completed",
-    status: "Graduated with Distinction",
+    period: "Completed · 2024",
+    status: "Graduated with 98% Distinction",
     score: "98%",
     location: "Andhra Pradesh, India",
-    description: "Completed rigorous pre-university education with an exceptional 98% academic distinction, mastering foundational mathematics, analytical physics, and chemistry.",
+    description: "Completed pre-university education with a 98% aggregate score, focusing on advanced mathematics, analytical physics, and chemistry.",
     highlights: [
-      "Outstanding academic performance achieving 98% aggregate score",
-      "Advanced analytical calculus, algebra, and coordinate geometry",
-      "Disciplined academic consistency and strong work ethic"
+      "98% aggregate score in Mathematics, Physics, and Chemistry",
+      "Advanced calculus, analytical algebra, and coordinate geometry",
+      "Strong academic consistency and quantitative problem-solving foundations"
     ]
   }
 ];

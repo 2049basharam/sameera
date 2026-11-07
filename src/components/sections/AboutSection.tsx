@@ -34,8 +34,8 @@ export default function AboutSection() {
           </div>
 
           {/* Location & Focus Details */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-            <div className="flex items-start gap-3 p-4 rounded-xl bg-white/70 border border-[#171918]/8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div className="flex items-start gap-3 p-5 rounded-xl bg-white/70 border border-[#171918]/8">
               <MapPin className="w-4 h-4 text-[#283C32] mt-0.5" />
               <div>
                 <p className="text-xs font-mono text-[#777B76]">Location</p>
@@ -43,7 +43,7 @@ export default function AboutSection() {
               </div>
             </div>
 
-            <div className="flex items-start gap-3 p-4 rounded-xl bg-white/70 border border-[#171918]/8">
+            <div className="flex items-start gap-3 p-5 rounded-xl bg-white/70 border border-[#171918]/8">
               <User className="w-4 h-4 text-[#283C32] mt-0.5" />
               <div>
                 <p className="text-xs font-mono text-[#777B76]">Focus</p>
@@ -61,7 +61,7 @@ export default function AboutSection() {
               {profileData.about.strengths.map((str, idx) => (
                 <span
                   key={idx}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-white border border-[#171918]/8 text-[#171918]"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-mono bg-white border border-[#171918]/8 text-[#171918]"
                 >
                   <Check className="w-3.5 h-3.5 text-[#283C32]" />
                   <span>{str}</span>
@@ -73,7 +73,7 @@ export default function AboutSection() {
 
         {/* Right Column: Candidate Profile Card */}
         <div className="lg:col-span-5 space-y-4">
-          <div className="p-6 sm:p-8 rounded-2xl bg-white/90 border border-[#171918]/8 space-y-5">
+          <div className="p-6 sm:p-8 rounded-xl bg-white/90 border border-[#171918]/8 space-y-6">
             <div className="flex items-center justify-between pb-3 border-b border-[#171918]/8">
               <div>
                 <span className="text-xs font-mono text-[#777B76]">Candidate profile</span>
@@ -92,7 +92,7 @@ export default function AboutSection() {
                 {profileData.about.languages.map((lang, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center justify-between p-2.5 rounded-lg bg-[#F5F3EE] text-xs"
+                    className="flex items-center justify-between p-3 rounded-lg bg-[#F5F3EE] text-xs"
                   >
                     <span className="font-medium text-[#171918]">{lang.name}</span>
                     <span className="text-[#777B76] font-mono">{lang.level}</span>
@@ -102,7 +102,7 @@ export default function AboutSection() {
             </div>
 
             {/* Objective */}
-            <div className="p-3.5 rounded-xl bg-[#283C32]/5 border border-[#283C32]/10 space-y-1">
+            <div className="p-4 rounded-lg bg-[#283C32]/5 border border-[#283C32]/10 space-y-1.5">
               <span className="text-xs font-mono text-[#283C32] font-medium">
                 Current objective
               </span>

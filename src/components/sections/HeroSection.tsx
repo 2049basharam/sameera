@@ -33,7 +33,7 @@ export default function HeroSection({ onExplore, onDiscover }: HeroSectionProps)
       <div className="max-w-5xl mx-auto w-full my-auto py-8">
         <div className="space-y-6">
           {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/90 border border-[#171918]/8 pointer-events-auto">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/90 border border-[#171918]/8 pointer-events-auto">
             <span className="w-1.5 h-1.5 rounded-full bg-[#283C32]" />
             <span className="text-xs font-mono text-[#171918]">
               {profileData.status}
@@ -54,7 +54,7 @@ export default function HeroSection({ onExplore, onDiscover }: HeroSectionProps)
           <div className="pt-2 flex flex-wrap items-center gap-3 pointer-events-auto">
             <button
               onClick={onExplore}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#171918] text-[#F5F3EE] hover:bg-[#283C32] rounded-full text-xs font-mono transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#171918] text-[#F5F3EE] hover:bg-[#283C32] rounded-lg text-xs font-mono transition-colors"
             >
               <span>Explore projects</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -62,7 +62,7 @@ export default function HeroSection({ onExplore, onDiscover }: HeroSectionProps)
 
             <button
               onClick={onDiscover}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-[#ECEAE3] text-[#171918] rounded-full text-xs font-mono border border-[#171918]/10 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-[#ECEAE3] text-[#171918] rounded-lg text-xs font-mono border border-[#171918]/10 transition-colors"
             >
               <span>About my journey</span>
             </button>

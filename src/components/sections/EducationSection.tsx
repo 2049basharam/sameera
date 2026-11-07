@@ -29,14 +29,14 @@ export default function EducationSection() {
           {educationData.map((edu) => (
             <div
               key={edu.id}
-              className="p-6 sm:p-8 rounded-2xl bg-white/90 border border-[#171918]/8 space-y-5"
+              className="p-6 sm:p-8 rounded-xl bg-white/90 border border-[#171918]/8 space-y-6"
             >
               {/* Header */}
               <div className="flex items-start justify-between gap-4">
                 <div className="space-y-1">
                   <div className="flex items-center gap-1.5 text-xs font-mono text-[#777B76]">
                     <Calendar className="w-3.5 h-3.5 text-[#283C32]" />
-                    <span>{edu.period}</span>
+                    <span className="tabular-nums">{edu.period}</span>
                   </div>
                   <h3 className="text-xl font-bold text-[#171918] tracking-tight">
                     {edu.institution}
@@ -49,7 +49,7 @@ export default function EducationSection() {
                 {edu.score ? (
                   <div className="px-3 py-1.5 rounded-lg bg-[#283C32]/8 text-center shrink-0">
                     <span className="text-[10px] font-mono text-[#777B76] block">Score</span>
-                    <span className="text-base font-bold text-[#283C32]">{edu.score}</span>
+                    <span className="text-base font-bold text-[#283C32] tabular-nums">{edu.score}</span>
                   </div>
                 ) : (
                   <div className="p-2.5 rounded-lg bg-[#F5F3EE] text-center shrink-0">
@@ -59,7 +59,7 @@ export default function EducationSection() {
               </div>
 
               {/* Status Badge */}
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-xs font-mono bg-[#F5F3EE] text-[#171918]">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-mono bg-[#F5F3EE] text-[#171918]">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#283C32]" />
                 <span>{edu.status}</span>
               </div>
@@ -70,11 +70,11 @@ export default function EducationSection() {
               </p>
 
               {/* Highlights */}
-              <div className="space-y-1.5 pt-1 border-t border-[#171918]/8">
+              <div className="space-y-2 pt-2 border-t border-[#171918]/8">
                 <h4 className="text-xs font-mono text-[#777B76]">
                   Focus areas
                 </h4>
-                <ul className="space-y-1 text-xs text-[#171918]/80">
+                <ul className="space-y-1.5 text-xs text-[#171918]/80">
                   {edu.highlights.map((h, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <Check className="w-3.5 h-3.5 text-[#283C32] mt-0.5 shrink-0" />

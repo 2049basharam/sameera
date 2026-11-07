@@ -29,13 +29,13 @@ export default function LearningJourneySection() {
           {learningJourneyData.map((item, idx) => (
             <div
               key={idx}
-              className="p-6 sm:p-7 rounded-2xl bg-white/90 border border-[#171918]/8"
+              className="p-6 sm:p-8 rounded-xl bg-white/90 border border-[#171918]/8"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                 {/* Step Header */}
-                <div className="lg:col-span-4 space-y-1.5">
+                <div className="lg:col-span-4 space-y-2">
                   <div className="flex items-center gap-2 text-xs font-mono">
-                    <span className="font-semibold text-[#283C32]">
+                    <span className="font-semibold text-[#283C32] tabular-nums">
                       Stage {idx + 1}
                     </span>
                     <span className="text-[#777B76]">/</span>
@@ -59,11 +59,11 @@ export default function LearningJourneySection() {
                 </div>
 
                 {/* Milestones */}
-                <div className="lg:col-span-4 space-y-1.5">
+                <div className="lg:col-span-4 space-y-2">
                   <span className="text-xs font-mono text-[#777B76] block">
                     Active milestones
                   </span>
-                  <ul className="space-y-1 text-xs text-[#171918]/80">
+                  <ul className="space-y-1.5 text-xs text-[#171918]/80">
                     {item.milestones.map((ms, mIdx) => (
                       <li key={mIdx} className="flex items-start gap-2">
                         <Check className="w-3.5 h-3.5 text-[#283C32] mt-0.5 shrink-0" />

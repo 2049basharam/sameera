@@ -57,12 +57,12 @@ export default function SkillsSection({
         </div>
 
         {/* Filter Pills */}
-        <div className="flex flex-wrap items-center gap-1.5">
+        <div className="flex flex-wrap items-center gap-2">
           {categories.map((c) => (
             <button
               key={c.id}
               onClick={() => setFilterCategory(c.id)}
-              className={`px-3 py-1 rounded-full text-xs font-mono transition-colors ${
+              className={`px-3 py-1.5 rounded-md text-xs font-mono transition-colors ${
                 filterCategory === c.id
                   ? "bg-[#171918] text-[#F5F3EE]"
                   : "bg-white/80 text-[#171918]/70 hover:text-[#171918] hover:bg-white border border-[#171918]/8"
@@ -74,7 +74,7 @@ export default function SkillsSection({
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {filteredSkills.map((skill) => {
             const isSelected = selectedSkill?.id === skill.id;
             const isLearning = skill.status === "learning";
@@ -83,16 +83,16 @@ export default function SkillsSection({
               <div
                 key={skill.id}
                 onClick={() => onSelectSkill(skill)}
-                className={`p-5 rounded-2xl cursor-pointer transition-colors border ${
+                className={`p-6 rounded-xl cursor-pointer transition-colors border ${
                   isSelected
                     ? "bg-[#171918] text-[#F5F3EE] border-[#171918]"
-                    : "bg-white/90 hover:bg-white text-[#171918] border-[#171918]/8 hover:border-[#171918]/20"
+                    : "bg-white hover:bg-[#FAF9F5] text-[#171918] border-[#171918]/8 hover:border-[#171918]/20"
                 }`}
               >
                 {/* Status Indicator */}
-                <div className="flex items-center justify-between mb-2.5">
+                <div className="flex items-center justify-between mb-3">
                   <span
-                    className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-mono ${
+                    className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11px] font-mono ${
                       isLearning
                         ? isSelected
                           ? "bg-white/10 text-[#A9B7A0]"
@@ -103,21 +103,22 @@ export default function SkillsSection({
                     }`}
                   >
                     {isLearning ? (
-                      <Clock className="w-3 h-3" />
+                      <Clock className="w-3 h-3 text-[#283C32]" />
                     ) : (
-                      <Check className="w-3 h-3" />
+                      <Check className="w-3 h-3 text-[#283C32]" />
                     )}
                     <span>{skill.statusLabel}</span>
                   </span>
 
                   <span
-                    className="w-2 h-2 rounded-full"
-                    style={{ backgroundColor: skill.color }}
+                    className={`w-1.5 h-1.5 rounded-full ${
+                      isLearning ? "bg-[#283C32]" : "bg-[#171918]/25"
+                    }`}
                   />
                 </div>
 
                 {/* Skill Name */}
-                <h3 className="text-base font-semibold tracking-tight">
+                <h3 className="text-base font-medium tracking-tight">
                   {skill.name}
                 </h3>
                 <p
@@ -130,7 +131,7 @@ export default function SkillsSection({
 
                 {/* Short Description */}
                 <p
-                  className={`text-xs mt-2.5 line-clamp-2 leading-relaxed ${
+                  className={`text-xs mt-3 line-clamp-2 leading-relaxed ${
                     isSelected ? "text-[#F5F3EE]/80" : "text-[#171918]/70"
                   }`}
                 >
@@ -139,12 +140,12 @@ export default function SkillsSection({
 
                 {/* Category label */}
                 <div
-                  className={`mt-3.5 flex items-center justify-between pt-2.5 border-t text-[11px] font-mono ${
+                  className={`mt-4 flex items-center justify-between pt-3 border-t text-[11px] font-mono ${
                     isSelected ? "border-white/10 text-[#A9B7A0]" : "border-[#171918]/5 text-[#777B76]"
                   }`}
                 >
                   <span>{skill.categoryLabel}</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
+                  <ChevronRight className="w-3.5 h-3.5 text-[#777B76]" />
                 </div>
               </div>
             );
@@ -155,7 +156,7 @@ export default function SkillsSection({
       {/* Selected Skill Inspector Modal */}
       {selectedSkill && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/30 backdrop-blur-sm">
-          <div className="max-w-lg w-full bg-white rounded-2xl border border-[#171918]/10 p-6 md:p-8 space-y-5 relative">
+          <div className="max-w-lg w-full bg-white rounded-xl border border-[#171918]/10 p-6 md:p-8 space-y-6 relative">
             <button
               onClick={onCloseSkill}
               className="absolute top-5 right-5 p-1.5 rounded-lg hover:bg-[#F5F3EE] text-[#171918] transition-colors"
@@ -176,7 +177,7 @@ export default function SkillsSection({
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-[#F5F3EE] space-y-1.5">
+            <div className="p-4 rounded-lg bg-[#F5F3EE] space-y-1.5">
               <div className="flex items-center gap-1.5 text-xs font-mono text-[#171918] font-medium">
                 <Info className="w-3.5 h-3.5 text-[#283C32]" />
                 <span>Technical context</span>
@@ -198,7 +199,7 @@ export default function SkillsSection({
             <div className="pt-2 flex justify-end">
               <button
                 onClick={onCloseSkill}
-                className="px-4 py-2 rounded-full bg-[#171918] text-[#F5F3EE] text-xs font-mono hover:bg-[#283C32] transition-colors"
+                className="px-4 py-2 rounded-lg bg-[#171918] text-[#F5F3EE] text-xs font-mono hover:bg-[#283C32] transition-colors"
               >
                 Close
               </button>
