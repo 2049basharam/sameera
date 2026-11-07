@@ -5,7 +5,6 @@ import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import HeroSculpture from "./HeroSculpture";
 import ParticleField from "./ParticleField";
-import SkillsConstellation from "./SkillsConstellation";
 import CameraController from "./CameraController";
 import { SkillItem } from "@/data/skills";
 
@@ -46,7 +45,6 @@ export default function WorldCanvas({
 
   // Render 3D elements appropriately per section
   const showHero = activeSection === "hero" || activeSection === "about" || activeSection === "contact";
-  const showSkills = activeSection === "skills";
 
   return (
     <div className="fixed inset-0 pointer-events-auto z-0 overflow-hidden">
@@ -112,17 +110,6 @@ export default function WorldCanvas({
             <group visible={showHero}>
               <HeroSculpture
                 scrollProgress={scrollProgress}
-                mousePos={mousePos}
-              />
-            </group>
-          )}
-
-          {/* 2. Interactive Skills 3D Constellation */}
-          {showSkills && (
-            <group visible={showSkills}>
-              <SkillsConstellation
-                onSelectSkill={onSelectSkill}
-                selectedSkillId={selectedSkillId}
                 mousePos={mousePos}
               />
             </group>

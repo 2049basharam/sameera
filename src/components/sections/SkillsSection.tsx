@@ -44,7 +44,7 @@ export default function SkillsSection({
               02 — Technical Skills
             </span>
             <h2 className="text-3xl sm:text-5xl font-normal tracking-tight text-[#171918] font-editorial leading-tight">
-              Technology Constellation
+              Technical Foundations & Stack
             </h2>
             <p className="text-sm text-[#777B76] max-w-xl">
               Core frontend foundations alongside active learning in React.js, C++, and Data Structures.
