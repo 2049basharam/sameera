@@ -37,9 +37,9 @@ export const profileData: ProfileData = {
   subRole: "Web Development Enthusiast",
   location: "Narasaraopet, Andhra Pradesh, India",
   phone: "+91 9063372716",
-  email: "sksameera@321sgmail.com",
-  linkedIn: "https://www.linkedin.com/in/shaik-sameera-bhanu-86b67341a/",
-  github: "https://github.com/sameera-bhanu",
+  email: "sksameera321s@gmail.com",
+  linkedIn: "http://linkedin.com/in/shaik-sameera-bhanu-86b67341a/",
+  github: "https://github.com/sksameera321",
   status: "Open to frontend internships",
   bio: "I'm Shaik Sameera Bhanu, a first-year B.Tech student interested in frontend development and building responsive, user-friendly websites. I enjoy turning ideas into interactive web experiences using HTML, CSS, and JavaScript. I'm currently learning React.js, strengthening my C++ fundamentals, and exploring Data Structures and Algorithms.",
   hero: {
